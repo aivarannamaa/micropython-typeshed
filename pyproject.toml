@@ -1,0 +1,49 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuitpython-typeshed"
+version = "0.1.0"
+description = "A typeshed for checking CircuitPython code"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Aivar Annamaa" }
+]
+urls = {"Homepage" = "https://github.com/aivarannamaa/circuitpython-typeshed"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Typing :: Typed",
+    "Typing :: Stubs Only",
+    "Operating System :: OS Independent"
+]
+
+[project.scripts]
+circuitpython_setboard = "circuitpython_setboard:set_board"
+
+[tool.setuptools]
+# Treat `src` as the package root
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+# Discover every namespace package (no __init__.py required) under src
+where = ["src"]
+namespaces = true
+
+[tool.setuptools.package-data]
+# Ship stub files and metadata from every discovered package
+"*" = ["*.pyi", "**/*.pyi", "VERSIONS", "**/VERSIONS"]
+
+[tool.setuptools.exclude-package-data]
+# Make absolutely sure compiled byte-code doesn’t get into the wheel
+"*" = ["*.pyc", "**/*.pyc"]
+
+[dependency-groups]
+dec = ["mypy", "basedpyright"]
