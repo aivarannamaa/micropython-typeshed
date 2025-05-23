@@ -18,8 +18,8 @@ The stubs and typeshed helpers are compiled from the following sources
 
 ## Installation
 
-You can install this package into a venv (e.g. `pip install circuitython-typeshed`) or into a plain directory
-(e.g. `python3 -m pip install circuitpython-typeshed --target typeshed --no-user`).
+You can install this package into a venv (e.g. `pip install micropython-typeshed`) or into a plain directory
+(e.g. `python3 -m pip install micropython-typeshed --target typeshed --no-user`).
 
 ## Using with Pyright and basedpyright
 

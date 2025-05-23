@@ -6,15 +6,15 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "circuitpython-typeshed"
+name = "micropython-typeshed"
 version = "0.1.0"
-description = "A typeshed for checking CircuitPython code"
+description = "A typeshed for checking MicroPython code"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
     { name = "Aivar Annamaa" }
 ]
-urls = {"Homepage" = "https://github.com/aivarannamaa/circuitpython-typeshed"}
+urls = {"Homepage" = "https://github.com/aivarannamaa/micropython-typeshed"}
 requires-python = ">=3.8"
 classifiers = [
     "License :: OSI Approved :: MIT License",
@@ -23,9 +23,6 @@ classifiers = [
     "Typing :: Stubs Only",
     "Operating System :: OS Independent"
 ]
-
-[project.scripts]
-circuitpython_setboard = "circuitpython_setboard:set_board"
 
 [tool.setuptools]
 # Treat `src` as the package root

@@ -11,7 +11,7 @@ import typing
 from typing import Optional, Tuple
 
 def uname() -> _Uname:
-    """Returns a named tuple of operating specific and CircuitPython port
+    """Returns a named tuple of operating specific and MicroPython port
     specific information."""
     ...
 

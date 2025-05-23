@@ -2,8 +2,6 @@ import shutil
 import os.path
 import sys
 import subprocess
-import tarfile
-import fileinput
 
 if os.path.exists("src"):
     shutil.rmtree("src")
